@@ -17,6 +17,8 @@ function initializePage() {
 
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
+  $(".project").width(525);//animate({
+      //width: 525});
 	$("a.thumbnail").click(projectClick);
 	$("#submitBtn").click(updateProject); 
 	$(".description").hide()
@@ -44,6 +46,7 @@ function projectClick(e) { 
 
 function updateProject(e) {
    var projectID = $('#project').val();
+   $(".project").removeAttr("width");
    $(projectID).animate({
       width: $('#width').val()
    });
